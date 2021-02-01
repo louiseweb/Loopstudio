@@ -1,0 +1,89 @@
+
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+/* Variables */
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Dark-Gray: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Alata', sans-serif;
+}
+
+a {
+    text-decoration: none ;
+    color: var(--White);
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 65px;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--White);
+    font-weight: 300;
+    margin-bottom: -15px;
+    line-height: .95;
+}
+
+.container {
+    max-width: 1190px;
+    padding: 0px 40px;
+    margin: 0 auto;
+}
+
+/* Layout */
+
+/* Hero */
+.hero {
+    height: 650px;
+    background-image: url('images/desktop/image-hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero__header {
+    max-width: 570px;
+    transform: translateY(175px);
+    border: var(--White) 2px solid;
+    padding: 30px 30px 30px 25px;
+}
+
+/* Nav */
+.nav {
+    height: 96px;
+}
+
+.nav__content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.nav__links {
+    display: flex;
+}
+
+.nav__links li:not(:last-child) {
+    margin-right: 30px;
+}
+
+
+    
