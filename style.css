@@ -1,6 +1,6 @@
 
 /* Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@200&display=swap');
 
 /* Variables */
 :root {
@@ -36,15 +36,26 @@ h1 {
     text-transform: uppercase;
     font-family: 'Josefin Sans', sans-serif;
     color: var(--White);
-    font-weight: 300;
+    font-weight: 200;
     margin-bottom: -15px;
     line-height: .95;
+}
+
+h2 {
+    font-size: 48px;
 }
 
 .container {
     max-width: 1190px;
     padding: 0px 40px;
     margin: 0 auto;
+}
+
+/* Container - Phone Layout */
+@media only screen and (max-width: 767px) {
+    .container {
+        padding: 0px 24px;
+    } 
 }
 
 /* Layout */
@@ -56,16 +67,46 @@ h1 {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
+}
+
+.hero__dropdown {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--Black);
+    z-index: 1;
+    display: none;
 }
 
 .hero__header {
     max-width: 570px;
     transform: translateY(175px);
     border: var(--White) 2px solid;
-    padding: 30px 30px 30px 25px;
+    padding: 30px 30px 30px 25px;   
+}
+
+/* Hero - Phone Layout */
+@media only screen and (max-width: 767px) {
+    .hero {
+        height: 100vh;
+        background-image: url('images/mobile/image-hero.jpg');
+    }
+
+    .hero__header {
+        transform: translateY(163px);
+        padding: 30px 30px 30px 20px;
+    }
+
+    .hero__header h1 {
+        font-size: 11vw;
+        /* max-width: 200px; */
+    }
+
 }
 
 /* Nav */
+
 .nav {
     height: 96px;
 }
@@ -77,13 +118,71 @@ h1 {
     align-items: flex-end;
 }
 
+.nav__logo {
+    width: 192px;
+    z-index: 1;
+}
+
 .nav__links {
     display: flex;
+    z-index: 1;
 }
 
 .nav__links li:not(:last-child) {
     margin-right: 30px;
 }
+
+.nav__links a {
+    padding-bottom: 10px;
+}
+
+.nav__links a:hover {
+    border-bottom: var(--White) 3px solid;
+}
+
+.nav__hamburger {
+    display: none;
+    padding-bottom: 2px;
+    z-index: 1;
+}
+
+.nav__cross {
+    display: none;
+    z-index: 1;
+}
+
+/* Nav - Phone Layout */
+@media only screen and (max-width: 767px) {
+    .nav {
+        height: 64px;       
+    }
+
+    .nav__logo img {
+        width: 144px;
+    }
+
+    .nav__links {
+        display: none;
+        position: absolute;
+        top: 223px;
+        font-family: 'Josefin Sans', sans-serif;
+        text-transform: uppercase;
+        font-size: 24px;
+    }
+
+    .nav__links li:not(:last-child) {
+        margin-right: 0px;
+        margin-bottom: 30px;
+        height: 30px;     
+    }
+
+    .active {
+        display: block;
+    }
+
+}
+
+
 
 
     
