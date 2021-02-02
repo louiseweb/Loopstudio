@@ -31,6 +31,11 @@ li {
     list-style: none;
 }
 
+p {
+    color: var(--Dark-Gray);
+    line-height: 1.8;
+}
+
 h1 {
     font-size: 65px;
     text-transform: uppercase;
@@ -43,6 +48,17 @@ h1 {
 
 h2 {
     font-size: 48px;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--Black);
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 32px;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--White);
 }
 
 .container {
@@ -87,7 +103,7 @@ h2 {
 }
 
 /* Hero - Phone Layout */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 780px) {
     .hero {
         height: 100vh;
         background-image: url('images/mobile/image-hero.jpg');
@@ -99,14 +115,12 @@ h2 {
     }
 
     .hero__header h1 {
-        font-size: 11vw;
-        /* max-width: 200px; */
+        font-size: 10vw;
+        max-width: 200px;
     }
-
 }
 
 /* Nav */
-
 .nav {
     height: 96px;
 }
@@ -182,7 +196,106 @@ h2 {
 
 }
 
+/* Feature */
+.feature__content {
+    padding-top: 160px;
+    padding-bottom: 160px;
+    position: relative;
+}
 
+.feature__img {
+    max-width: 730px;
+}
 
+.feature__text {
+    padding: 89px;
+    background-color: var(--White);
+    width: 640px;
+    position: absolute;
+    bottom: 40px;
+    left: 570px;
+}
 
-    
+/* Feature - Phone Layout */
+@media only screen and (max-width: 767px) {
+    .feature__content {
+        position: unset;
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+
+    .feature__img {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .feature__text {
+        position: relative;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        padding: 0px 10px;
+        text-align: center;
+    }
+
+    .feature__text h2 {
+        font-size: 32px;
+    }
+
+}
+
+/* Products */
+.products__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 84px;
+}
+
+.products__cta {
+    font-family: 'Alata', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--White);
+    width: 157px;
+    height: 40px;
+    border: none;
+    background-color: black;
+    display: inline;
+    cursor: pointer;
+    outline: none;
+}
+
+.products__cta:hover {
+    opacity: 0.7;
+}
+
+.products__item {
+    background-color: chartreuse;
+    width: 256px;
+    height: 450px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 40px;    
+}
+
+.products__item.deep-earth {
+    background-image: url('images/desktop/image-deep-earth.jpg');
+    background-repeat: no-repeat;
+
+}
+.products__item .night-arade
+.products__item .soccer-team
+
+.products__item .the-grid
+.products__item .from-above
+.products__item .pocket-borealis
+.products__item .the-curiosity
+.products__item .fisheye
+.products__items {
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
