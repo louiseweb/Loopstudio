@@ -212,7 +212,7 @@ h3 {
     background-color: var(--White);
     width: 640px;
     position: absolute;
-    bottom: 40px;
+    bottom: 70px;
     left: 570px;
 }
 
@@ -255,47 +255,246 @@ h3 {
     font-family: 'Alata', sans-serif;
     text-transform: uppercase;
     letter-spacing: 5px;
-    color: var(--White);
+    color: var(--Black);
     width: 157px;
     height: 40px;
-    border: none;
-    background-color: black;
+    border: 1px var(--Black) solid;
+    background-color: var(--White);
     display: inline;
     cursor: pointer;
     outline: none;
 }
 
+.products__cta.mobile {
+    display: none;
+} 
+
 .products__cta:hover {
-    opacity: 0.7;
+    background-color: var(--Black);
+    color: var(--White);
 }
 
+.products__items {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin-bottom: 180px;
+  }
+
 .products__item {
-    background-color: chartreuse;
-    width: 256px;
+    width: 100%;
     height: 450px;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: flex-end;
-    padding: 40px;    
+    padding: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+} 
+
+.products__item h3 {
+    z-index: 1;
 }
 
 .products__item.deep-earth {
     background-image: url('images/desktop/image-deep-earth.jpg');
-    background-repeat: no-repeat;
-
-}
-.products__item .night-arade
-.products__item .soccer-team
-
-.products__item .the-grid
-.products__item .from-above
-.products__item .pocket-borealis
-.products__item .the-curiosity
-.products__item .fisheye
-.products__items {
-  display: grid; 
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
 }
 
+.products__item.night-arade {
+    background-image: url('images/desktop/image-night-arcade.jpg');
+}
+
+.products__item.soccer-team {
+    background-image: url('images/desktop/image-soccer-team.jpg');
+}
+
+.products__item.the-grid {
+    background-image: url('images/desktop/image-grid.jpg');
+}
+
+.products__item.from-above {
+    background-image: url('images/desktop/image-from-above.jpg');    
+}
+
+.products__item.pocket-borealis {
+    background-image: url('images/desktop/image-pocket-borealis.jpg')
+}
+
+.products__item.the-curiosity {
+    background-image: url('images/desktop/image-curiosity.jpg')
+}
+
+.products__item.fisheye {
+    background-image: url('images/desktop/image-fisheye.jpg')
+}
+
+.products__item:hover > h3 {
+    color: var(--Black);
+}
+
+.products__item:hover::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    Width: 100%;
+    background-color: var(--White);
+    opacity: 0.8;
+}
+
+/* Products - Phone Layout */
+@media only screen and (max-width: 767px) { 
+    .products__header h2 {
+        font-size: 32px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .products__header {
+        margin-bottom: 20px;
+    }
+
+    .products__header button {
+        display: none;
+    }
+
+    .products__items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 96px;
+    }
+
+    .products__item {
+        height: 120px;
+        margin-bottom: 5px;
+        padding: 15px;
+        justify-content: flex-start;
+        align-items: flex-end;
+        background-size: cover;
+        background-position:unset;
+    }
+
+    .products__item.deep-earth {
+        background-image: url('images/mobile/image-deep-earth.jpg');
+    }
+    
+    .products__item.night-arade {
+        background-image: url('images/mobile/image-night-arcade.jpg');
+    }
+    
+    .products__item.soccer-team {
+        background-image: url('images/mobile/image-soccer-team.jpg');
+    }
+    
+    .products__item.the-grid {
+        background-image: url('images/mobile/image-grid.jpg');
+    }
+    
+    .products__item.from-above {
+        background-image: url('images/mobile/image-from-above.jpg');    
+    }
+    
+    .products__item.pocket-borealis {
+        background-image: url('images/mobile/image-pocket-borealis.jpg')
+    }
+    
+    .products__item.the-curiosity {
+        background-image: url('images/mobile/image-curiosity.jpg')
+    }
+    
+    .products__item.fisheye {
+        background-image: url('images/mobile/image-fisheye.jpg')
+    }
+
+    .products__item h3 {
+        text-align: left;
+        max-width: 200px;
+    }
+
+    .products__cta.mobile {
+        display: block;
+    }
+
+}
+
+/* Footer Section */
+.footer {
+    background-color: var(--Black);
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footer__content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer__logo img {
+    width: 144px;
+    margin-bottom: 20px;
+}
+
+.footer__links {
+    display: flex;
+}
+
+.footer__links li a {
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+.footer__links li:not(:last-child) {
+    margin-right: 30px;
+}
+
+.footer__links a:hover {
+    border-bottom: var(--White) 3px solid;
+}
+
+.footer__socials {
+    margin-bottom: 20px;
+}
+
+.footer__socials a:not(:last-child) {
+    margin-right: 10px;
+}
+
+.footer__copyright {
+    color: var(--White);
+}
+
+/* Footer - Phone Layout */
+@media only screen and (max-width: 767px) { 
+    .footer__content {
+       flex-direction: column;
+       align-items: center;
+    }
+
+    .footer__links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 48px;
+    }
+
+    .footer__links li:not(:last-child) {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .footer__content-right {
+        align-items: center;
+    }
+}
