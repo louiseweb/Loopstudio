@@ -68,7 +68,7 @@ h3 {
 }
 
 /* Container - Phone Layout */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1300px) {
     .container {
         padding: 0px 24px;
     } 
@@ -103,7 +103,7 @@ h3 {
 }
 
 /* Hero - Phone Layout */
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1300px) {
     .hero {
         height: 100vh;
         background-image: url('images/mobile/image-hero.jpg');
@@ -166,7 +166,7 @@ h3 {
 }
 
 /* Nav - Phone Layout */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1300px) {
     .nav {
         height: 64px;       
     }
@@ -208,7 +208,7 @@ h3 {
 }
 
 .feature__text {
-    padding: 89px;
+    padding: 90px;
     background-color: var(--White);
     width: 640px;
     position: absolute;
@@ -216,8 +216,8 @@ h3 {
     left: 570px;
 }
 
-/* Feature - Phone Layout */
-@media only screen and (max-width: 767px) {
+/* Feature - Phone */
+@media only screen and (max-width: 1300px) {
     .feature__content {
         position: unset;
         padding-top: 94px;
@@ -241,7 +241,6 @@ h3 {
     .feature__text h2 {
         font-size: 32px;
     }
-
 }
 
 /* Products */
@@ -348,7 +347,7 @@ h3 {
 }
 
 /* Products - Phone Layout */
-@media only screen and (max-width: 767px) { 
+@media only screen and (max-width: 1300px) { 
     .products__header h2 {
         font-size: 32px;
         text-align: center;
@@ -476,7 +475,7 @@ h3 {
 }
 
 /* Footer - Phone Layout */
-@media only screen and (max-width: 767px) { 
+@media only screen and (max-width: 1300px) { 
     .footer__content {
        flex-direction: column;
        align-items: center;
